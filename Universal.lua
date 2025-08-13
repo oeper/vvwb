@@ -81,7 +81,7 @@ pcall(function() core = game:GetService('CoreGui') end)
 local function vapeGithubRequest(scripturl)
 	if not isfile('vape/'..scripturl) then
 		local suc, res = pcall(function() 
-			return game:HttpGet('https://raw.githubusercontent.com/VapeVoidware/vapevoidware/'..readfile('vape/commithash.txt')..'/'..scripturl, true) 
+			return game:HttpGet('https://raw.githubusercontent.com/oeper/vvwb/'..readfile('vape/commithash.txt')..'/'..scripturl, true) 
 		end)
 		if not suc or res == '404: Not Found' then
 			suc, res = pcall(function() 
@@ -8230,7 +8230,7 @@ shared.ReinstallVoidware = function()
 	if isfile('ModulesData.txt') then
 		writefile('vape/Libraries/ModulesData.txt', readfile('ModulesData.txt'))
 	end
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/vapevoidware/main/NewMainScript.lua", true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/oeper/vapevoidware/main/NewMainScript.lua", true))()
 end
 run("ReinstallVoidware", function() local ReinstallVoidware = {}
 	ReinstallVoidware = GuiLibrary.ObjectsThatCanBeSaved.VoidwareWindow.Api.CreateOptionsButton({
@@ -8247,7 +8247,7 @@ run("ReinstallVoidware", function() local ReinstallVoidware = {}
 				if isfile('ModulesData.txt') then
 					writefile('vape/Libraries/ModulesData.txt', readfile('ModulesData.txt'))
 				end
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/vapevoidware/main/NewMainScript.lua", true))()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/oeper/vapevoidware/main/NewMainScript.lua", true))()
 			end
 		end
 	}) end)
